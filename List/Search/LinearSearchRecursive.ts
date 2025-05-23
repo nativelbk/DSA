@@ -1,3 +1,5 @@
+////O(n)
+
 function recurse(array: number[], needle: number, i: number): boolean {
   //base
   if (i === array.length) {
