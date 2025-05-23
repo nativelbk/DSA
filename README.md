@@ -1,6 +1,6 @@
 # DSA
 
-This project will includes a collection of classic implementations in Data Structures and Algorithms (DSA). It aims to strengthen understanding of core algorithmic concepts while applying programming best practices.
+This project includes a collection of classic implementations in Data Structures and Algorithms (DSA). It aims to strengthen understanding of core algorithmic concepts while applying programming best practices.
 
 ## 📚 Contents
 
@@ -30,3 +30,7 @@ This project will includes a collection of classic implementations in Data Struc
 /DSA
 ├── arrays/
 │ └── ...
+
+## 🧠 Prerequisites
+
+- Basic knowledge of programming and Typescript
