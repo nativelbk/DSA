@@ -16,11 +16,14 @@ function recurse(
   if (needle === tmpValue) {
     return true;
   } else if (needle > tmpValue) {
+    //pre recursion
     lo = mid + 1;
   } else {
+    //pre recursion
     hi = mid;
   }
 
+  //recurse
   return recurse(array, needle, lo, hi);
 }
 
