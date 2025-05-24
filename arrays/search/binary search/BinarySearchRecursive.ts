@@ -1,4 +1,4 @@
-//O(n)
+//O(log(n))
 function recurse(
   array: number[],
   needle: number,
