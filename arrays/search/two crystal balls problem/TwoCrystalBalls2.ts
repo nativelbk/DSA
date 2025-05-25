@@ -16,8 +16,17 @@ export default function twoCrystalBalls2(breaks: boolean[]): number {
       } else {
         lo = mid + 1;
       }
-    } else if (mid === 0 || mid === breaks.length - 1) {
+    } else if (mid === 0) {
       return tmpValue ? mid : -1;
+    } else if (mid === breaks.length - 1) {
+      if (breaks.length === 2) {
+        if (breaks[mid - 1]) {
+          return mid - 1;
+        }
+        return tmpValue ? mid : -1;
+      } else {
+        return tmpValue ? mid : -1;
+      }
     }
   } while (lo < hi);
 
