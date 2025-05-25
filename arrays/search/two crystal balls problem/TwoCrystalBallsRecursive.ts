@@ -14,10 +14,10 @@ function findFirstBreak(
   j: number,
   i: number
 ): number {
-  if (breaks[i]) {
-    return i;
-  } else if (j >= jump || i >= breaks.length) {
+  if (j >= jump || i >= breaks.length) {
     return -1;
+  } else if (breaks[i]) {
+    return i;
   }
 
   return findFirstBreak(breaks, jump, j + 1, i + 1);
