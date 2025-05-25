@@ -5,7 +5,7 @@ export default function twoCrystalBalls2(breaks: boolean[]): number {
     hi = breaks.length;
 
   do {
-    const mid = lo + (hi - lo) / 2;
+    const mid = Math.floor(lo + (hi - lo) / 2);
     const tmpValue = breaks[mid];
 
     if (mid > 0 && mid < breaks.length - 1) {
