@@ -1,5 +1,11 @@
 function qs(array: number[], lo: number, hi: number) {
+  if (lo >= hi) {
+    return;
+  }
   const pivotIdx = partition(array, lo, hi);
+
+  qs(array, lo, pivotIdx - 1);
+  qs(array, pivotIdx + 1, hi);
 }
 
 function partition(array: number[], lo: number, hi: number): number {
