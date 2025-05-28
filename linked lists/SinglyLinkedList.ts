@@ -1,4 +1,5 @@
 import { TSinglyLinkedList } from "../types/types";
+import { BubleSort } from "../arrays/sort/buble sort/BubleSort";
 
 export default class SinglyLinkedList<T> {
   private head?: TSinglyLinkedList<T>;
@@ -77,5 +78,12 @@ export default class SinglyLinkedList<T> {
     }
 
     return false;
+  }
+
+  sortList() {
+    let list = this.traverse();
+    BubleSort(list);
+    this.head = undefined;
+    this.addItems(...list);
   }
 }
