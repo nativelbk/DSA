@@ -1,4 +1,4 @@
-import { ArrayT } from "../../../type/type";
+import { ArrayT } from "../../../types/types";
 
 function qs(array: number[], lo: number, hi: number) {
   if (lo >= hi) {

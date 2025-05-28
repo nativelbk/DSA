@@ -1,4 +1,4 @@
-import { ArrayT } from "../../../type/type";
+import { ArrayT } from "../../../types/types";
 
 //O(n^2)
 

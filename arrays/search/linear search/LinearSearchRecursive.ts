@@ -1,4 +1,4 @@
-import { SearchInArray } from "../../../type/type";
+import { SearchInArray } from "../../../types/types";
 
 ////O(n)
 
