@@ -1,6 +1,5 @@
 import { TSinglyLinkedList } from "../types/types";
-import { BubleSort } from "../arrays/sort/buble sort/BubleSort";
-
+import QuickSort from "../arrays/sort/quick sort/QuickSort";
 export default class SinglyLinkedList<T> {
   private head?: TSinglyLinkedList<T>;
   public length: number;
@@ -82,7 +81,7 @@ export default class SinglyLinkedList<T> {
 
   sortList() {
     let list = this.traverse();
-    BubleSort(list);
+    QuickSort(list);
     this.head = undefined;
     this.addItems(...list);
   }
