@@ -44,9 +44,10 @@ export default class SinglyLinkedList<T> {
           };
           lastNode = lastNode?.next;
         }
+        this.length++;
       }
     } else {
-      lastNode = this?.head;
+      lastNode = this.head;
       while (lastNode.next) {
         lastNode = lastNode?.next;
       }
@@ -56,9 +57,8 @@ export default class SinglyLinkedList<T> {
           value: item[i],
         };
         lastNode = lastNode?.next;
+        this.length++;
       }
     }
-
-    this.length++;
   }
 }
