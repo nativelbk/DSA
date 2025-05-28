@@ -1,6 +1,6 @@
 import { ArrayT } from "../../../types/types";
 
-function qs(array: number[], lo: number, hi: number) {
+function qs<T>(array: T[], lo: number, hi: number) {
   if (lo >= hi) {
     return;
   }
@@ -10,7 +10,7 @@ function qs(array: number[], lo: number, hi: number) {
   qs(array, pivotIdx + 1, hi);
 }
 
-function partition(array: number[], lo: number, hi: number): number {
+function partition<T>(array: T[], lo: number, hi: number): number {
   const pivot = array[hi];
   let idx = lo - 1;
 
@@ -29,6 +29,6 @@ function partition(array: number[], lo: number, hi: number): number {
   return idx;
 }
 
-export default function QuickSort({ array }: ArrayT<number>) {
-  qs(array, 0, array.length - 1);
+export default function QuickSort<T>( array: T[] ) {
+  qs<T>(array, 0, array.length - 1);
 }
