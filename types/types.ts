@@ -1,12 +1,12 @@
-export type SinglyLinkedList<T> = {
+export type TSinglyLinkedList<T> = {
   value: T;
-  next?: SinglyLinkedList<T>;
+  next?: TSinglyLinkedList<T>;
 };
 
-export type DoublyLinkedList<T> = {
+export type TDoublyLinkedList<T> = {
   value: T;
-  next?: DoublyLinkedList<T>;
-  previous?: DoublyLinkedList<T>;
+  next?: TDoublyLinkedList<T>;
+  previous?: TDoublyLinkedList<T>;
 };
 
 export type SearchInArray<T> = {
