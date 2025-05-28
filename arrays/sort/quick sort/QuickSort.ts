@@ -1,3 +1,5 @@
+import { ArrayT } from "../../../type/type";
+
 function qs(array: number[], lo: number, hi: number) {
   if (lo >= hi) {
     return;
@@ -27,6 +29,6 @@ function partition(array: number[], lo: number, hi: number): number {
   return idx;
 }
 
-export default function QuickSort(array: number[]) {
+export default function QuickSort({ array }: ArrayT<number>) {
   qs(array, 0, array.length - 1);
 }

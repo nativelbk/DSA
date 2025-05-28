@@ -1,3 +1,5 @@
+import { SearchInArray } from "../../../type/type";
+
 ////O(n)
 
 function recurse(array: number[], needle: number, i: number): boolean {
@@ -12,9 +14,9 @@ function recurse(array: number[], needle: number, i: number): boolean {
   return recurse(array, needle, i + 1);
 }
 
-export default function linearSearchRecursive(
-  array: number[],
-  needle: number
-): boolean {
+export default function linearSearchRecursive({
+  array,
+  needle,
+}: SearchInArray<number>): boolean {
   return recurse(array, needle, 0);
 }

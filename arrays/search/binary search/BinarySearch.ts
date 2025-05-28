@@ -1,6 +1,7 @@
 //O(log(n))
+import { SearchInArray } from "../../../type/type";
 
-export default function (array: number[], needle): boolean {
+export default function ({ array, needle }: SearchInArray<number>): boolean {
   let lo = 0,
     hi = array.length;
   do {
