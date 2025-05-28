@@ -16,7 +16,7 @@ export default class SinglyLinkedList<T> {
       return [];
     }
 
-    let current: TSinglyLinkedList<T> | undefined = this?.head;
+    let current: TSinglyLinkedList<T> | undefined = this.head;
     let returnValue: T[] = [];
 
     while (current) {
@@ -28,22 +28,7 @@ export default class SinglyLinkedList<T> {
   }
 
   add(item: T): void {
-    if (!this.head) {
-      this.head = {
-        value: item,
-      };
-      return;
-    }
-
-    let lastNode: TSinglyLinkedList<T> | undefined = this?.head;
-
-    while (lastNode?.next) {
-      lastNode = lastNode.next;
-    }
-
-    lastNode!.next = {
-      value: item,
-    };
+    this.addItems(item);
   }
 
   addItems(...item: T[]) {
@@ -73,5 +58,7 @@ export default class SinglyLinkedList<T> {
         lastNode = lastNode?.next;
       }
     }
+
+    this.length++;
   }
 }
