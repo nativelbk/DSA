@@ -61,4 +61,21 @@ export default class SinglyLinkedList<T> {
       }
     }
   }
+
+  searchItem(item: T): boolean {
+    if (!this.head) {
+      return false;
+    }
+
+    let current: TSinglyLinkedList<T> | undefined = this.head;
+
+    while (current) {
+      if (current.value === item) {
+        return true;
+      }
+      current = current.next;
+    }
+
+    return false;
+  }
 }
